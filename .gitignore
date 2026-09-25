@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Data (re-created by get_data.py; not redistributed)
+data/
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/settings.json
