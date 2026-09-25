@@ -1,6 +1,6 @@
 # Momentum Replication
 
-[![tests](https://github.com/YOUR_USERNAME/momentum-replication/actions/workflows/tests.yml/badge.svg)](https://github.com/YOUR_USERNAME/momentum-replication/actions/workflows/tests.yml)
+[![tests](https://github.com/VrishabR/momentum-replication/actions/workflows/tests.yml/badge.svg)](https://github.com/VrishabR/momentum-replication/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A replication of the price momentum effect from Jegadeesh & Titman (1993),
@@ -48,7 +48,7 @@ momentum-replication/
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/momentum-replication.git
+git clone https://github.com/VrishabR/momentum-replication.git
 cd momentum-replication
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
