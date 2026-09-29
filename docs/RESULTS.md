@@ -34,12 +34,12 @@ Neither dataset shows a statistically significant momentum effect (all |t| < 2) 
 headline setting, but the two datasets fail in different, informative ways.
 
 **S&P 500:** the full-sample effect is essentially flat-to-negative and never
-statistically significant in any sub-period. It's worst in 2005-2012 — which includes
+statistically significant in any sub-period. It's worst in 2005-2012, which includes
 the 2008-2009 financial crisis, a period widely associated with sharp "momentum crash"
-episodes in the academic literature — and drifts toward small and positive but still
+episodes in the academic literature, and drifts toward small and positive but still
 insignificant by 2020-2025. There's no stable, persistent effect here.
 
-**Crypto:** the positive headline number is not a stable effect — it's almost entirely
+**Crypto:** the positive headline number is not a stable effect. It's almost entirely
 driven by one sub-period. 2019-2021 alone produced a large, statistically significant
 result (+7.31%/month, t=2.16), while 2022-2025 was negative and insignificant (-1.14%,
 t=-0.41). Averaging those two very different regimes together is what produces the
@@ -59,7 +59,7 @@ Using the pre-registered rule (|HAC t| > ~2 = significant):
   and is not statistically significant in the full sample or in any sub-period.
 - **Crypto: Weaker / regime-dependent.** The full-sample number is positive but not
   significant. The one sub-period that *is* significant (2019-2021) is a single bull
-  market, not a repeatable pattern — the following period reversed it. I would not
+  market, not a repeatable pattern, the following period reversed it. I would not
   call this "same as the original paper," since the original found a stable effect
   across its full sample, not one driven by a single regime.
 
@@ -69,22 +69,22 @@ Using the pre-registered rule (|HAC t| > ~2 = significant):
 My predictions (from `docs/PROTOCOL.md`) were that S&P 500 would show a real but
 weaker positive effect, and that crypto would show a larger but noisier one. What
 actually happened was more extreme than predicted: **the S&P 500 effect wasn't just
-weaker, it was absent** — flat to slightly negative rather than a diminished positive.
+weaker, it was absent**, flat to slightly negative rather than a diminished positive.
 Crypto matched the "noisier, larger raw effect" prediction, but not in the way I
-expected: rather than noise scattered randomly around a positive average, the entire
+expected. Rather than noise scattered randomly around a positive average, the entire
 result came from one concentrated bull-market period.
 
 This is a genuine divergence from the original 1965-1989 result, not a replication of
 it. A plausible explanation, consistent with published finance research, is that
 momentum's profitability in U.S. equities has decayed since the effect became widely
-known and traded on following the original paper's publication — sometimes called
-"alpha decay" from crowding — combined with this sample including the 2008 crisis,
+known and traded on following the original paper's publication, sometimes called
+"alpha decay" from crowding, combined with this sample including the 2008 crisis,
 a period specifically associated with momentum strategies performing unusually badly.
 
 ## Threats to validity
 
 - The S&P 500 sample (2005-2025) is dominated by two unusual regimes for momentum:
-  the 2008 crisis and its aftermath, and the 2020 COVID crash/recovery — both known
+  the 2008 crisis and its aftermath, and the 2020 COVID crash/recovery, both known
   to be difficult periods for momentum strategies specifically. A different 20-year
   window might show a different picture.
 - The crypto "effect" is a single sub-period result; with only two roughly 3-year
