@@ -1,0 +1,4 @@
+experiment,gross_mean_monthly_pct,gross_t_stat_hac,gross_annualized_sharpe,net_mean_monthly_pct
+sp500_deciles,-0.1141,-0.3202,-0.0753,-0.1808
+sp500_quintiles,-0.1227,-0.4587,-0.1065,-0.1894
+crypto_quintiles,2.0052,1.0457,0.3925,1.8052
