@@ -102,7 +102,4 @@ reported as a full grid in `results/results_grid.csv`, not cherry-picked after t
 
 ## Deviations from this protocol
 
-*(Fill in only if you change something after seeing results — what changed, why, and
-what the result looked like both ways.)*
-
-- None yet.
+- None.
