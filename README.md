@@ -14,10 +14,10 @@ outperform the worst performers over the following 3–12 months.
 
 ## Why this project
 
-Backtests are easy to get quietly wrong — a single unshifted line of code can leak
+Backtests are easy to get quietly wrong. A single unshifted line of code can leak
 future information into a signal and make almost any strategy look profitable. This
-project is built to make that mistake hard to make silently: the experimental protocol
-is written and committed *before* any result is produced (`docs/PROTOCOL.md`), the
+project is built to make that mistake hard to make silently. The experimental protocol
+is written and committed before any result is produced (`docs/PROTOCOL.md`), the
 core ranking logic has an explicit unit test asserting no look-ahead, and significance
 is judged with Newey-West-corrected standard errors rather than a naive t-test, since
 the strategy's overlapping holding periods inflate the naive one.
@@ -117,14 +117,7 @@ Ken French validation.
 
 Full details in [`docs/PROTOCOL.md`](docs/PROTOCOL.md#limitations-stated-in-advance).
 
-## Extending this project
 
-- Add a third dataset (e.g., a non-US equity index) by adding an entry to
-  `config.EXPERIMENTS` and a corresponding download step in `get_data.py`.
-- Tighten the cost model in `metrics.apply_costs` (e.g., per-asset bid-ask spreads
-  instead of a flat cost).
-- Add a value-weighted variant of `strategy.wml_returns` alongside the current
-  equal-weighted one.
 
 ## References
 
