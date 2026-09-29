@@ -66,13 +66,21 @@ reported as a full grid in `results/results_grid.csv`, not cherry-picked after t
   Dataset B (2019–2021, 2022–2025), run at the headline `(J, K, skip)` only.
 - Cost-adjusted vs. gross returns.
 
-## Predictions (write these in before running `run_experiment.py`)
+## Predictions
 
-- Dataset A: [your prediction]
-- Dataset B: [your prediction]
-- Which is likely to survive cost adjustment: [your prediction]
+- Dataset A (S&P 500): I predict a positive momentum effect will appear, but weaker
+  than in the original 1965–1989 sample. Momentum has been public knowledge in
+  academic finance since 1993, so any edge may be partly arbitraged away by now.
+- Dataset B (crypto): I predict a stronger raw effect than equities, since crypto
+  markets are younger, more retail-driven, and narrative-driven price trends tend to
+  persist longer. I also expect it to be noisier (lower t-stats) given the much
+  shorter sample (2018–2025 vs. 2005–2025) and higher volatility.
+- Cost survival: I predict the S&P 500 result is more likely to survive cost
+  adjustment than crypto, since the assumed trading cost for crypto (0.3%/trade) is
+  three times higher than equities (0.1%/trade), and any crypto edge is more likely
+  to be thin enough that costs erase it.
 
-## Limitations, stated in advance
+## Limitations
 
 - **Survivorship bias.** Both universes are defined by membership *today*, so
   companies and coins that failed and disappeared are excluded. This tends to flatter
