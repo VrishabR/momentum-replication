@@ -84,7 +84,7 @@ pytest -v
 ```
 
 12 unit tests cover the ranking logic, the winners-minus-losers construction, cost
-adjustment, and — most importantly — a regression test that perturbing a future price
+adjustment, and most importantly, a regression test that perturbing a future price
 does not change past strategy returns. Tests run automatically on every push via GitHub
 Actions (see the badge above).
 
