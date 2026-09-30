@@ -4,7 +4,6 @@ IMPORTANT: these settings are part of the pre-registered protocol (docs/PROTOCOL
 If you change one after seeing results, record it under 'Deviations' in the protocol.
 """
 
-# ---- Data download settings ----
 SP500_START, SP500_END = "2005-01-01", "2025-12-31"
 CRYPTO_START, CRYPTO_END = "2018-01-01", "2025-12-31"
 CRYPTO_TICKERS = [
@@ -14,13 +13,11 @@ CRYPTO_TICKERS = [
     "XTZ-USD", "NEO-USD", "DASH-USD", "ZEC-USD",
 ]
 
-# ---- Strategy grid ----
-J_VALUES = (3, 6, 9, 12)    # formation (look-back) months
+J_VALUES = (3, 6, 9, 12)    # formation months
 K_VALUES = (3, 6, 9, 12)    # holding months
-SKIP_VALUES = (0, 1)        # 0 = paper's main version; 1 = skip most recent month
-HEADLINE = (6, 6, 0)        # (J, K, skip) used for the headline table and chart
+SKIP_VALUES = (0, 1)        # 1 = exclude most recent month from ranking
+HEADLINE = (6, 6, 0)        
 
-# ---- Experiments ----
 # q = share of assets in each leg (0.1 = deciles); one_way_cost = assumed trading cost per
 # dollar traded (0.001 = 0.1%); periods = sub-samples for the stability check.
 EXPERIMENTS = [

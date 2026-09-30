@@ -3,7 +3,7 @@
 Run:  python -m momentum_replication.run_experiment
 """
 import matplotlib
-matplotlib.use("Agg")  # write chart files directly, no display needed
+matplotlib.use("Agg") 
 import matplotlib.pyplot as plt
 import pandas as pd
 

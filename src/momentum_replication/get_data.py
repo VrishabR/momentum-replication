@@ -14,14 +14,14 @@ from momentum_replication.paths import DATA_DIR, UNIVERSE_DIR
 
 def to_month_end(daily_prices):
     try:
-        return daily_prices.resample("ME").last()   # newer pandas
+        return daily_prices.resample("ME").last()  
     except ValueError:
-        return daily_prices.resample("M").last()    # older pandas
+        return daily_prices.resample("M").last()  
 
 
 def download_monthly(tickers, start, end, out_file):
     daily = yf.download(tickers, start=start, end=end, auto_adjust=True, progress=True)["Close"]
-    daily = daily.dropna(axis=1, how="all")            # drop tickers with no data at all
+    daily = daily.dropna(axis=1, how="all")           
     missing = sorted(set(tickers) - set(daily.columns))
     if missing:
         print(f"WARNING: no data for {len(missing)} tickers: {missing}")

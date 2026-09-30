@@ -36,7 +36,7 @@ def wml_returns(prices, J, K, q=0.1, skip=0, min_assets=10):
     for k in range(1, K + 1):
         r = rank.shift(k)  # ranks that were known k months ago -> no look-ahead
         enough = n_valid.shift(k) >= min_assets
-        winners = monthly_ret.where(r > (1 - q) + EPS).mean(axis=1)   # strictly above cutoff
-        losers = monthly_ret.where(r <= q + EPS).mean(axis=1)         # at or below cutoff
+        winners = monthly_ret.where(r > (1 - q) + EPS).mean(axis=1)   
+        losers = monthly_ret.where(r <= q + EPS).mean(axis=1)         
         cohorts.append((winners - losers).where(enough))
     return pd.concat(cohorts, axis=1).mean(axis=1, skipna=False).dropna()

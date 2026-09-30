@@ -66,7 +66,7 @@ def test_wml_returns_has_no_lookahead():
 
     altered = prices.copy()
     last_date = altered.index[-1]
-    altered.loc[last_date, "A0"] *= 5.0  # shock only the final month, only one asset
+    altered.loc[last_date, "A0"] *= 5.0  
 
     wml_after = wml_returns(altered, J=6, K=3, q=0.2, skip=0, min_assets=10)
     # every return except possibly the final month(s) touched by that price must be unchanged
@@ -77,7 +77,7 @@ def test_wml_returns_has_no_lookahead():
 def test_min_assets_threshold_drops_thin_months():
     prices = make_prices(n_assets=15)
     thin = prices.copy()
-    thin.iloc[50:55, 5:] = np.nan  # collapse most assets for a few months
+    thin.iloc[50:55, 5:] = np.nan 
     wml = wml_returns(thin, J=6, K=3, q=0.2, skip=0, min_assets=10)
     # months 50-54 should not appear as valid observations once their K-month window passes
     assert wml.index.isin(thin.index[50:55]).sum() <= 5
@@ -96,6 +96,6 @@ def test_load_monthly_prices_sorts_by_date(tmp_path):
 
 
 def test_wml_returns_raises_nothing_on_empty_result_gracefully():
-    prices = make_prices(n_assets=5)  # fewer assets than min_assets requires
+    prices = make_prices(n_assets=5)  
     wml = wml_returns(prices, J=6, K=3, q=0.2, skip=0, min_assets=50)
     assert wml.empty

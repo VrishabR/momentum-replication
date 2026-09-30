@@ -38,11 +38,9 @@ def apply_costs(returns, K, one_way_cost):
     """Subtract an approximate trading-cost drag from monthly strategy returns.
 
     Assumptions (deliberately conservative):
-      * each leg is 100% of capital (long 100%, short 100%);
-      * each month 1/K of each leg is sold and 1/K is bought, so 2/K per leg, 4/K total;
-      * every trade costs `one_way_cost` (e.g. 0.001 = 0.1%);
-      * ignores names that stay in the portfolio (so it overstates turnover),
-        and ignores shorting fees and financing costs (so it understates those).
+      Each leg is 100% of capital (long 100%, short 100%), each month 1/K of each leg is sold and 1/K is bought (so 2/K per leg, 4/L total).
+      Each trade costs 'one_way_cost' and ignores names that stay in the portfolio.
+      Ignores shorting fees and financing costs.
     """
     monthly_drag = (4.0 / K) * one_way_cost
     return returns - monthly_drag
